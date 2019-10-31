@@ -1,0 +1,44 @@
+# Site
+name: "Wire Engineering"
+title: "Wire Engineering"
+description: "Welcome to Wire Engineering. We are strong believers of Open Source and Knowledge Sharing. Here you will find content about software engineering, problem solving and experiences."
+meta_description: "Welcome to Wire Engineering. We are strong believers of Open Source and Knowledge Sharing. Here you will find content about software engineering, problem solving and experiences."
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/favicon.ico'
+paginate: 8
+baseurl: ''
+email: 'engineering@wire.com'
+google_analytics: ''
+disqus: ''
+sharethis: ''
+
+# Authors
+authors:
+  fernando:
+    name: Fernando Cejas
+    display_name: Fernando Cejas
+    gravatar: 12defde716586eb2d726d081a161756d
+    email: fernando@wire.com
+    web: https://www.fernandocejas.com
+    twitter: https://twitter.com/fernando_cejas
+    description: "Mobile Director @Wire. Nerdy, huge fan of Open Source and knoledge sharing. Speaker. I love Scalability, Quantum Computing, Mobile Development and Software Engineering in general."
+
+# Plugins
+plugins: 
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+        
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+    
+# Other
+markdown: kramdown
+highlighter: rouge
