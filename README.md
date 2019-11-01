@@ -1,17 +1,17 @@
 # TODO: Still WIP but functional
- [ ] - Email setup: engineers@wire.com (file: _config.yml).
+ [] - Email setup: engineers@wire.com (file: _config.yml).
 
- [ ] - Analytics? (file: _config.yml).
+ [] - Analytics? (file: _config.yml).
 
- [ ] - Disqus for discussions (file: _config.yml).
+ [] - Disqus for discussions (file: _config.yml).
 
- [ ] - Sharethis for content sharing (file: _config.yml).
+ [] - Sharethis for content sharing (file: _config.yml).
 
- [ ] - Polish styles and colors.
+ [] - Polish styles and colors.
 
- [ ] - Setup domain: https://engineering.wire.com/
+ [] - Setup domain: https://engineering.wire.com/
 
- [ ] - How to contribute section
+ [] - How to contribute section
 
 # "Wire Engineering Blog" - Jekyll Template
 
