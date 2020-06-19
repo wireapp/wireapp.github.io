@@ -7,7 +7,7 @@ logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 paginate: 8
 baseurl: ''
-email: 'engineering@wire.com'
+email: 'fernando@wire.com'
 google_analytics: ''
 disqus: ''
 sharethis: ''
@@ -21,7 +21,7 @@ authors:
     email: fernando@wire.com
     web: https://www.fernandocejas.com
     twitter: https://twitter.com/fernando_cejas
-    description: "Mobile Director @Wire. Nerdy, huge fan of Open Source and knoledge sharing. Speaker. I love Scalability, Quantum Computing, Mobile Development and Software Engineering in general."
+    description: "Director of Mobile @Wire. Nerdy, huge fan of Open Source and knoledge sharing. Speaker. I love Scalability, Quantum Computing, Mobile Development and Software Engineering in general."
 
 # Plugins
 plugins: 
