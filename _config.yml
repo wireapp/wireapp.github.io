@@ -14,6 +14,14 @@ sharethis: ''
 
 # Authors
 authors:
+  wire:
+    name: Wire Engineering
+    display_name: Wire Engineering
+    gravatar: ec53eaa4d47c6532d534864aa84531a2
+    email: fernando@wire.com
+    web: https://wire.engineering
+    description: "The most secure collaboration platform."
+
   fernando:
     name: Fernando Cejas
     display_name: Fernando Cejas
