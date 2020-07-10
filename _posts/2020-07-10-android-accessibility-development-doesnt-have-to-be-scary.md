@@ -4,7 +4,7 @@ title:  "Android Accessibility Development Doesn't Have to Be Scary"
 author: bradley
 description: Android accessibility development can be seen as a daunting task, but it doesn't have to be. Here are some tips to make it less scary. 
 categories: [ engineering, accessibility, android ]
-image: assets/images/posts/accessibility_article_featured.jpg
+image: assets/images/posts/accessibility_article_featured.jpeg
 featured: true
 ---
 
@@ -31,7 +31,7 @@ If you create a custom component that doesn't extend from the intended view you 
 
 If we use a `TextView`, apply a click listener to it to navigate somewhere else. A non-accessible user may not notice anything different. But for an accessibility user, we lose some key talkback capabilities that come with it.
 
-```
+```xml
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -44,7 +44,7 @@ If we have talkback enabled and navigate to this `TextView` the user will hear:
 
 But if we use a `Button` (which is the intended component here):
 
-```
+```xml
 <Button
     style="@style/Widget.MaterialComponents.Button.TextButton"
     android:layout_width="match_parent"
@@ -71,12 +71,12 @@ If you still need to request focus for better user experience, you can query the
 
 **Example**:
 
-```
+```kotlin
 fun View.screenReaderFocusable() =
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
         isScreenReaderFocusable = true
     } else {
-        ViewCompat.setAccessibilityDelegate(this, object : AccessibilityDelegateCompat() {
+        ViewCompat.setAccessibilityDelegate(this, object: AccessibilityDelegateCompat() {
             override fun onInitializeAccessibilityNodeInfo(
                 host: View,
                 info: AccessibilityNodeInfoCompat
@@ -89,7 +89,7 @@ fun View.screenReaderFocusable() =
 ```
 You can call it like this:
 
-```
+```kotlin
 private fun requestFocus(view: View) {
     if (!accessibility.isTalkbackEnabled()) {
         view.requestFocus()
@@ -97,7 +97,7 @@ private fun requestFocus(view: View) {
 }
 ```
 
-If you want more control of focus when talkback is enabled take a look at android:ScreenReaderFocusable (which was introduced in API 28). If you are using AndroidX, you can also achieve this in a backwards compatible way (API 19 and above) like below:
+If you want more control of focus when talkback is enabled take a look at `android:ScreenReaderFocusable` (which was introduced in API 28). If you are using AndroidX, you can also achieve this in a backwards compatible way (API 19 and above) like below:
 
 ## Tip #3: Touch Target Size
 
@@ -124,7 +124,7 @@ The Android OS doesn't know too much about what a heading is in the context of y
 
 For those targeting API 28 or above, you can simply add this to your view xml attribute as true. Otherwise, you can override the node information on a new `AccessibilityDelegate` for the view you want to declare a header and set the isHeading value true.
 
-```
+```kotlin
 fun View.headingForAccessibility() =
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
         isAccessibilityHeading = true
@@ -143,7 +143,7 @@ fun View.headingForAccessibility() =
 ```
 You can then use it like so:
 
-```
+```kotlin
 headingTextView.headingForAccessibility()
 
 ```
@@ -160,7 +160,7 @@ By using the same principles mentioned above around native components - we c
 
 You would implement it like so:
 
-```
+```kotlin
 class LinkTextView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
@@ -174,13 +174,12 @@ class LinkTextView @JvmOverloads constructor(
 }
 ```
 
-```
+```xml
 <com.bradley.wilson.accessibility.views.LinkTextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
     android:text="Go to www.google.com" />
-
 ```
 
 www.google.com will be hyperlinked. Now when you turn talkback on, swipe up the navigation to links. You can navigate all links on the screen without navigating through every component to find it.
@@ -192,12 +191,12 @@ The rest is simply text navigation, as long as you have text to consume on the s
 ## Tip #6: Information about screen content
 Also introduced in API 28 was the ability to set titles to particular areas of a screen, these are referred to as [panes](https://developer.android.com/about/versions/pie/android-9.0#a11y-pane-titles). They can refer to a `ViewGroup` or `Fragment` content.
 
-```
+```kotlin
 fun View.paneTitleForAccessibility(title: String) =
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
         accessibilityPaneTitle = title
     } else {
-        ViewCompat.setAccessibilityDelegate(this, object : AccessibilityDelegateCompat() {
+        ViewCompat.setAccessibilityDelegate(this, object: AccessibilityDelegateCompat() {
             override fun onInitializeAccessibilityNodeInfo(
                 host: View,
                 info: AccessibilityNodeInfoCompat
@@ -212,7 +211,7 @@ fun View.paneTitleForAccessibility(title: String) =
 
 It'd look something like this:
 
-```
+```kotlin
 paneView.paneTitleForAccessibility(getString(R.string.pain_title))
 ```
 
