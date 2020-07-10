@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Android Accessibility Development Doesn't Have to Be Scary"
+title:  "Android Accessibility Development Doesn't Have to Be Scary"
 author: bradley
 description: Android accessibility development can be seen as a daunting task, but it doesn't have to be. Here are some tips to make it less scary. 
 categories: [ engineering, accessibility, android ]
@@ -8,12 +8,10 @@ image: assets/images/posts/accessibility_article_featured.jpeg
 featured: true
 ---
 
-You can also find this article on [Medium](https://medium.com/swlh/android-accessibility-development-doesnt-have-to-be-scary-971cfe713a0e). 
-
-# Android Accessibility Development Doesn't Have to Be Scary
-
 > As developers, we make many assumptions about how users consume our application and that can actually hinder instead of help them. We need to ensure we're
-> keeping our flows as simple as possible and make everything accessible to every user in a way that makes sense to them, not us.
+> keeping our flows as simple as possible and make everything accessible to every user in a way that makes sense to them, not us.
+
+You can also find this article on [Medium](https://medium.com/swlh/android-accessibility-development-doesnt-have-to-be-scary-971cfe713a0e). 
 
 In this article, I want to share a few tips that really do make accessibility development less daunting. Apply some of these and you're already on your way to an accessible Android application.
 
@@ -56,7 +54,7 @@ But if we use a `Button` (which is the intended component here):
 
 These subtle changes make it consistent and provide more information for the accessibility users who are not only using your application, but other apps in the ecosystem.
 
-## Tip #2: Avoid forcing focus on views
+## Tip #2: Avoid forcing focus on views
 
 Focus **should not** be forced on any component for accessible users without a clear intent or interaction from them.
 
@@ -99,7 +97,7 @@ private fun requestFocus(view: View) {
 
 If you want more control of focus when talkback is enabled take a look at `android:ScreenReaderFocusable` (which was introduced in API 28). If you are using AndroidX, you can also achieve this in a backwards compatible way (API 19 and above) like below:
 
-## Tip #3: Touch Target Size
+## Tip #3: Touch Target Size
 
 As a rule of thumb, all touchable components should be at least 48dp in height by 48dp in width so users with dexterity issues can navigate the application easier. You can achieve this in several ways:
 
@@ -115,7 +113,7 @@ When navigating through UI flows, we want the experience to be as seamless as po
 
 **Note**: For components that do not add too much value to accessibility, or exist purely for decoration, you can also set the `contentDescription="@null"` which won't hurt the navigation experience for switch access users.
 
-## Tip #5: Help talkback users navigate faster
+## Tip #5: Help talkback users navigate faster
 
 Talkback users can swipe up to change the controls for how screen readers navigates the content on the screen. The screen reader can be followed in multiple ways (Headings, Paragraphs, Lines, Words, Characters, Controls, Links). I'll cover examples for headings and links below, you can find out about the rest [here](https://support.google.com/accessibility/android/answer/6006598?hl=en&ref_topic=3529932).
 
@@ -188,7 +186,7 @@ Other key navigation techniques such as controls rely on finding Android compone
 
 The rest is simply text navigation, as long as you have text to consume on the screen the OS will take care of the rest.
 
-## Tip #6: Information about screen content
+## Tip #6: Information about screen content
 Also introduced in API 28 was the ability to set titles to particular areas of a screen, these are referred to as [panes](https://developer.android.com/about/versions/pie/android-9.0#a11y-pane-titles). They can refer to a `ViewGroup` or `Fragment` content.
 
 ```kotlin
@@ -217,7 +215,7 @@ paneView.paneTitleForAccessibility(getString(R.string.pain_title))
 
 **Note**: As accessibility is user facing, always use strings from the strings.xml so you can take advantage of [localisation](https://developer.android.com/guide/topics/resources/localization).
 
-## Tip #7: Testing can be easy!
+## Tip #7: Testing can be easy!
 
 ### Analysis tools
 
