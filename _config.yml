@@ -23,6 +23,14 @@ authors:
     twitter: https://twitter.com/fernando_cejas
     description: "Director of Mobile @Wire. Nerdy, huge fan of Open Source and knowledge sharing. Speaker. I love Scalability, Quantum Computing, Mobile Development and Software Engineering in general."
 
+  bradley:
+    name: Bradley Wilson
+    display_name: Bradley Wilson
+    gravatar: 42952016f8d187247af3e0cb3b24f94e
+    email: bradley@wire.com
+    web: https://github.com/BradleyWire
+    description: "Bradley has been an Android engineer for 4 years professionally and works with Java, Kotlin and Python. With previous experience leading a team in a large UK bank. He specialises in refactoring legacy codebases to follow clean architectural principles/design, developing apps that are accessible by all and lives by the philosophy that if it isn't tested its broken."
+    
 # Plugins
 plugins: 
   - jekyll-paginate
