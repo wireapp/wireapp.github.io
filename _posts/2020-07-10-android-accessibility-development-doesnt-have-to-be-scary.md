@@ -8,10 +8,10 @@ image: assets/images/posts/accessibility_article_featured.jpeg
 featured: true
 ---
 
-You can also find this article on [Medium](https://medium.com/swlh/android-accessibility-development-doesnt-have-to-be-scary-971cfe713a0e). 
-
 > As developers, we make many assumptions about how users consume our application and that can actually hinder instead of help them. We need to ensure we're
 > keeping our flows as simple as possible and make everything accessible to every user in a way that makes sense to them, not us.
+
+You can also find this article on [Medium](https://medium.com/swlh/android-accessibility-development-doesnt-have-to-be-scary-971cfe713a0e). 
 
 In this article, I want to share a few tips that really do make accessibility development less daunting. Apply some of these and you're already on your way to an accessible Android application.
 
