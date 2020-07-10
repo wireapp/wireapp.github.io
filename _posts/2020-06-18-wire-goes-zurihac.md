@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Wire goes ZuriHac"
+author: wire
 categories: [haskell, events]
 image: assets/images/posts/wire-zurihac-article-featured.jpg
 feature: false
