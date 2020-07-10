@@ -10,8 +10,6 @@ featured: true
 
 You can also find this article on [Medium](https://medium.com/swlh/android-accessibility-development-doesnt-have-to-be-scary-971cfe713a0e). 
 
-# Android Accessibility Development Doesn't Have to Be Scary
-
 > As developers, we make many assumptions about how users consume our application and that can actually hinder instead of help them. We need to ensure we're
 > keeping our flows as simple as possible and make everything accessible to every user in a way that makes sense to them, not us.
 
